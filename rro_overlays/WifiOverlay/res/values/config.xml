@@ -52,4 +52,6 @@
      <integer translatable="false" name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
      <integer translatable="false" name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
 
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Nokia 8</string>
 </resources>
