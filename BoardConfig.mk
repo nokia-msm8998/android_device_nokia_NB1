@@ -53,9 +53,6 @@ BUILD_BROKEN_DUP_RULES := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
