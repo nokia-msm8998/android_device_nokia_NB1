@@ -457,6 +457,7 @@ PRODUCT_COPY_FILES += \
 # Update this list with what each blob is actually for
 # libstdc++: gx_fpd
 PRODUCT_PACKAGES += \
+    vndk_package \
     libstdc++.vendor
 
 # Wifi
