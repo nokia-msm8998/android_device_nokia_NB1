@@ -465,6 +465,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal-qcom \
+    netutils-wrapper-1.0 \
     wcnss_service \
     WifiOverlay \
     wpa_supplicant \
