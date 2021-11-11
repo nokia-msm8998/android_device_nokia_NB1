@@ -65,8 +65,9 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library \
+    com.dsi.ant@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
@@ -81,16 +82,17 @@ PRODUCT_PACKAGES += \
     Bluetooth \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
     libldacBT_bco
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
+    android.hardware.boot@1.1-impl.recovery \
     bootctrl.msm8998.recovery
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.1-impl \
+    android.hardware.boot@1.1-service \
     bootctrl.msm8998 \
 
 PRODUCT_PACKAGES_DEBUG += \
@@ -109,6 +111,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
@@ -126,6 +132,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
+    libgralloc.qti \
     libtinyxml \
     libqdMetaData \
     libqdMetaData.system \
@@ -136,22 +143,30 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@2.1-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.frameworks.displayservice@1.0 \
-    vendor.display.config@2.0.vendor
+
+# Display (QTI)
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.allocator@1.0.vendor \
+    vendor.qti.hardware.display.allocator@3.0.vendor \
+    vendor.qti.hardware.display.composer@1.0.vendor \
+    vendor.qti.hardware.display.composer@2.0.vendor \
+    vendor.qti.hardware.display.composer@3.0 \
+    vendor.display.config@1.0.vendor \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.mapper@1.0.vendor \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.2 \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.3 \
-    android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4 \
     android.hardware.drm@1.4.vendor \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.1.vendor \
     android.hardware.drm@1.4-service.clearkey
 
 # Fingerprint
@@ -187,8 +202,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     libbatching \
@@ -202,6 +217,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     apdr.conf \
     gps.conf \
+    gnss_antenna_info.conf \
     flp.conf \
     izat.conf \
     lowi.conf \
@@ -276,6 +292,7 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
     libc2dcolorconvert \
     libmm-omxcore \
     libOmxAacEnc \
@@ -369,12 +386,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni \
+    libvndfwk_detect_jni.vendor
 
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # Radio
@@ -430,8 +450,7 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_binder \
-    libshim_gui \
-    libshim_cutils
+    libshim_gui
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -520,6 +539,16 @@ PRODUCT_PACKAGES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libmediaextractorservice \
+    libnl \
+    libstagefright_enc_common
+
+#PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
