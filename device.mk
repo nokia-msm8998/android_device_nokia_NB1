@@ -474,6 +474,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces
 
+# Updates
+PRODUCT_PACKAGES += \
+    Updates
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
