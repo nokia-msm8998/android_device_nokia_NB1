@@ -12,42 +12,26 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-cc_library {
-    name: "libdisppower",
-    proprietary: true,
-    srcs: [
-        "disp-power/InteractionHandler.cpp",
-    ],
-     shared_libs: [
-        "libbase",
-        "libcutils",
-        "liblog",
-        "libperfmgr",
-        "libutils",
-    ],
-}
-
 cc_binary {
-    name: "android.hardware.power-service.msm8998-libperfmgr",
+    name: "android.hardware.power@1.2-service.nokia_msm8998",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.power-service.msm8998-libperfmgr.rc"],
-    vintf_fragments: ["aidl/android.hardware.power-service.msm8998.xml"],
-    vendor: true,
+    init_rc: ["android.hardware.power@1.2-service.nokia_msm8998.rc"],
+    srcs: ["service.cpp", "Power.cpp", "InteractionHandler.cpp", "power-helper.c"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
     shared_libs: [
-        "android.hardware.power-V1-ndk_platform",
         "libbase",
-        "libcutils",
+        "libhidlbase",
+        "libhidltransport",
         "liblog",
         "libutils",
-        "libbinder_ndk",
-        "libdisppower",
+        "libcutils",
+        "android.hardware.power@1.0",
+        "android.hardware.power@1.1",
+        "android.hardware.power@1.2",
         "libperfmgr",
-        "pixel-power-ext-V1-ndk_platform",
     ],
-    srcs: [
-        "aidl/service.cpp",
-        "aidl/Power.cpp",
-        "aidl/PowerExt.cpp",
-    ],
+    proprietary: true,
 }

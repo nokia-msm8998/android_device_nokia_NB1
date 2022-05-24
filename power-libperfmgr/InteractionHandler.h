@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-#ifndef POWER_LIBPERFMGR_INTERACTIONHANDLER_H_
-#define POWER_LIBPERFMGR_INTERACTIONHANDLER_H_
+#ifndef INTERACTIONHANDLER_H
+#define INTERACTIONHANDLER_H
 
 #include <condition_variable>
-#include <memory>
 #include <mutex>
-#include <string>
 #include <thread>
 
 #include <perfmgr/HintManager.h>
@@ -34,15 +32,14 @@ enum interaction_state {
     INTERACTION_STATE_WAITING,
 };
 
-class InteractionHandler {
-  public:
-    InteractionHandler(std::shared_ptr<HintManager> const &hint_manager);
+struct InteractionHandler {
+    InteractionHandler(std::shared_ptr<HintManager> const & hint_manager);
     ~InteractionHandler();
     bool Init();
     void Exit();
     void Acquire(int32_t duration);
 
-  private:
+ private:
     void Release();
     void WaitForIdle(int32_t wait_ms, int32_t timeout_ms);
     void AbortWaitLocked();
@@ -51,7 +48,7 @@ class InteractionHandler {
     void PerfLock();
     void PerfRel();
 
-    size_t CalcTimespecDiffMs(struct timespec start, struct timespec end);
+    long long CalcTimespecDiffMs(struct timespec start, struct timespec end);
 
     enum interaction_state mState;
 
@@ -71,4 +68,4 @@ class InteractionHandler {
     std::shared_ptr<HintManager> mHintManager;
 };
 
-#endif  // POWER_LIBPERFMGR_INTERACTIONHANDLER_H_
+#endif //INTERACTIONHANDLER_H
