@@ -592,4 +592,7 @@
     <bool name="config_button_brightness_support">true</bool>
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
     <integer name="config_button_brightness_default">128</integer>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
 </resources>
