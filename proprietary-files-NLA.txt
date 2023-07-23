@@ -4,16 +4,16 @@
 # Audio (Hardware) - from A1N QKQ1.190828.002
 vendor/etc/audio/silence_48k.wav|26df84a9ba771f568ae58f69a248cea4ce8b6209
 vendor/lib/hw/audio.primary.msm8998.so|11b783e02bd8dc27bacbcf0d3847810e54910ecd
-vendor/lib/libaudioalsa.so|272cd6a93bca7edbe3cf4323ca1612737f4f9cde
 vendor/lib/liba2dpoffload.so|a56079bb7b62600ef7ca661c5f05c8294ccd9d54
 vendor/lib/libaudio_log_utils.so|ad36513df2524539496677ff1cbec37037d0b476
+vendor/lib/libaudioalsa.so|272cd6a93bca7edbe3cf4323ca1612737f4f9cde
 vendor/lib/libhdmiedid.so|18a5b77de0a0ee0cbdcf4e1cc0026c7c048f886d
 vendor/lib/libhfp.so|10c85c88970c9919e67f6a4519053683c32f3c5c
 vendor/lib/libsndmonitor.so|92e11f09f5e6e37821466dff8c6c26fe4810de41
 vendor/lib64/hw/audio.primary.msm8998.so|e7280fb7c2841752864a75d92c0f877ce842fe98
-vendor/lib64/libaudioalsa.so|a743be854f0af2ae8f60d6c598f078a4c09f8b41
 vendor/lib64/liba2dpoffload.so|b4760206730448f188e68e2a55e67e4692c1525e
 vendor/lib64/libaudio_log_utils.so|a8e0f5215004c493ff9bc4541e91ed8d1b4411a6
+vendor/lib64/libaudioalsa.so|a743be854f0af2ae8f60d6c598f078a4c09f8b41
 vendor/lib64/libhdmiedid.so|70806d550dac22d47dce63f0a8cd83b02349fc3e
 vendor/lib64/libhfp.so|56bb74be4d16a1a90632eeddfa801af934596bda
 vendor/lib64/libsndmonitor.so|0ebc578de3a8001aea56ffad2307107f5f05b439
@@ -34,8 +34,8 @@ vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpegdma.so
 vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libmmqjpegdma.so
 vendor/lib/libmpbase.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
@@ -47,6 +47,22 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libvideoutils.so
 
 # Camera (Sensors)
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_mct_shimlayer.so
+vendor/lib/libmmcamera2_pp_buf_mgr.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_lib.so
+vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_bokeh.so
 vendor/lib/libmmcamera_cat24c64_MONO_eeprom.so
@@ -68,10 +84,13 @@ vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imx258_at24c64d_front_fih_eeprom.so
+vendor/lib/libmmcamera_imx258_color_fih.so
+vendor/lib/libmmcamera_imx258_front_fih.so
+vendor/lib/libmmcamera_imx258_mono_fih.so
 vendor/lib/libmmcamera_imx298.so
 vendor/lib/libmmcamera_imx318.so
-vendor/lib/libmmcamera_imx362_gt24c64a.so
 vendor/lib/libmmcamera_imx362.so
+vendor/lib/libmmcamera_imx362_gt24c64a.so
 vendor/lib/libmmcamera_imx376.so
 vendor/lib/libmmcamera_imx378.so
 vendor/lib/libmmcamera_irs1645.so
@@ -101,9 +120,9 @@ vendor/lib/libmmcamera_isp_fovcrop_viewfinder46.so
 vendor/lib/libmmcamera_isp_gamma44.so
 vendor/lib/libmmcamera_isp_gic48.so
 vendor/lib/libmmcamera_isp_gtm46.so
+vendor/lib/libmmcamera_isp_hdr48.so
 vendor/lib/libmmcamera_isp_hdr_be_stats46.so
 vendor/lib/libmmcamera_isp_hdr_bhist_stats44.so
-vendor/lib/libmmcamera_isp_hdr48.so
 vendor/lib/libmmcamera_isp_ihist_stats46.so
 vendor/lib/libmmcamera_isp_linearization40.so
 vendor/lib/libmmcamera_isp_ltm47.so
@@ -129,8 +148,8 @@ vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c32_imx362_eeprom.so
 vendor/lib/libmmcamera_ov12a10.so
-vendor/lib/libmmcamera_ov13850_q13v06k.so
 vendor/lib/libmmcamera_ov13850.so
+vendor/lib/libmmcamera_ov13850_q13v06k.so
 vendor/lib/libmmcamera_ov13855.so
 vendor/lib/libmmcamera_ov13880.so
 vendor/lib/libmmcamera_ov2281.so
@@ -140,9 +159,9 @@ vendor/lib/libmmcamera_ov4188.so
 vendor/lib/libmmcamera_ov5645.so
 vendor/lib/libmmcamera_ov5670.so
 vendor/lib/libmmcamera_ov5695.so
+vendor/lib/libmmcamera_ov8856.so
 vendor/lib/libmmcamera_ov8856_2lane.so
 vendor/lib/libmmcamera_ov8856_4lane.so
-vendor/lib/libmmcamera_ov8856.so
 vendor/lib/libmmcamera_ov8858.so
 vendor/lib/libmmcamera_ov8865.so
 vendor/lib/libmmcamera_paaf_lib.so
@@ -156,6 +175,9 @@ vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so
 vendor/lib/libmmcamera_s5k2l7.so
 vendor/lib/libmmcamera_s5k2l7sx.so
+vendor/lib/libmmcamera_s5k3l8.so
+vendor/lib/libmmcamera_s5k3l8_mono.so
+vendor/lib/libmmcamera_s5k3l8_nb1.so
 vendor/lib/libmmcamera_s5k3m2xm.so
 vendor/lib/libmmcamera_s5k3m2xx.so
 vendor/lib/libmmcamera_s5k3m3sm.so
@@ -176,42 +198,20 @@ vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libmmcamera_thread_services.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_truly_cma481_eeprom.so
 vendor/lib/libmmcamera_truly_cmb433_eeprom.so
+vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_tuning_lookup.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_mct.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct_shimlayer.so
-vendor/lib/libmmcamera2_pp_buf_mgr.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_lib.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib64/libmmcamera_dbg.so
-vendor/lib64/libmmcamera_faceproc.so
-vendor/lib64/libmmcamera_faceproc2.so
-vendor/lib64/libmmcamera_tintless_algo.so
-vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib64/libmmcamera2_frame_algorithm.so
 vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
 vendor/lib64/libmmcamera2_stats_lib.so
-vendor/lib/libmmcamera_imx258_color_fih.so
-vendor/lib/libmmcamera_imx258_front_fih.so
-vendor/lib/libmmcamera_imx258_mono_fih.so
-vendor/lib/libmmcamera_s5k3l8.so
-vendor/lib/libmmcamera_s5k3l8_mono.so
-vendor/lib/libmmcamera_s5k3l8_nb1.so
+vendor/lib64/libmmcamera_dbg.so
+vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc2.so
+vendor/lib64/libmmcamera_tintless_algo.so
+vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
 # Camera (Actuators)
 vendor/lib/libactuator_ad5816g.so
@@ -473,10 +473,10 @@ vendor/lib/libchromatix_s5k4e8_a1n_front_zsl_preview_3a.so
 vendor/lib/libchromatix_s5k4e8_a1n_front_zsl_video_3a.so
 
 # Camera (Eeprom)
-vendor/lib/libmmcamera_eeprom_util.so
-vendor/lib/libmmcamera_ohp0497_eeprom.so
 vendor/lib/libmmcamera_cat24c64_MONO_eeprom.so
 vendor/lib/libmmcamera_cat24c64_RGB_eeprom.so
+vendor/lib/libmmcamera_eeprom_util.so
+vendor/lib/libmmcamera_ohp0497_eeprom.so
 
 # Camera (Firmware)
 vendor/firmware/cpp_firmware_v1_10_0.fw
@@ -519,9 +519,9 @@ vendor/lib/libmmcamera_isp_fovcrop_viewfinder46.so
 vendor/lib/libmmcamera_isp_gamma44.so
 vendor/lib/libmmcamera_isp_gic48.so
 vendor/lib/libmmcamera_isp_gtm46.so
+vendor/lib/libmmcamera_isp_hdr48.so
 vendor/lib/libmmcamera_isp_hdr_be_stats46.so
 vendor/lib/libmmcamera_isp_hdr_bhist_stats44.so
-vendor/lib/libmmcamera_isp_hdr48.so
 vendor/lib/libmmcamera_isp_ihist_stats46.so
 vendor/lib/libmmcamera_isp_linearization40.so
 vendor/lib/libmmcamera_isp_ltm47.so
@@ -539,20 +539,20 @@ vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
 # Display (Firmware)
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
 vendor/firmware/TP_Firmware_JDI
 vendor/firmware/TP_Firmware_LG4946
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
 
 # Fingerprint
 vendor/bin/gx_fpd
 vendor/bin/qfp-daemon
-vendor/lib64/libfp_client.so|a132bbbde9ef7aac598fd314c087272dd474ded1
-vendor/lib64/libfpservice.so|29fd00a0bbd06c3cd608133b04205625b571d824
-vendor/lib64/libfpjni.so
-vendor/lib64/libqfp-service.so
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8998.so
 vendor/lib64/hw/gxfingerprint.default.so
+vendor/lib64/libfp_client.so|a132bbbde9ef7aac598fd314c087272dd474ded1
+vendor/lib64/libfpjni.so
+vendor/lib64/libfpservice.so|29fd00a0bbd06c3cd608133b04205625b571d824
+vendor/lib64/libqfp-service.so
 
 # Fingerprint (Firmware)
 etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00
@@ -583,11 +583,6 @@ vendor/lib/hw/keystore.msm8998.so|7ce29b1848f7ff4875918f5bdc996910a8046c9d
 vendor/lib64/hw/keystore.msm8998.so|68be3e488242336bc3c8a85db4a0393a581e8846
 
 # Graphics (Firmware)
-vendor/firmware/a530v1_pfp.fw
-vendor/firmware/a530v1_pm4.fw
-vendor/firmware/a530v2_seq.fw2
-vendor/firmware/a530v3_gpmu.fw2
-vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a530_gpmu.fw2
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
@@ -596,6 +591,11 @@ vendor/firmware/a530_zap.b01
 vendor/firmware/a530_zap.b02
 vendor/firmware/a530_zap.elf
 vendor/firmware/a530_zap.mdt
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 vendor/firmware/a540_zap.b00
 vendor/firmware/a540_zap.b01
@@ -609,21 +609,21 @@ vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
 
 # Sensors
 vendor/bin/sensors.qti
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsns_low_lat_stream_stub.so
-vendor/lib/sensors.ssc.so
 vendor/lib/sensor_calibrate.so
+vendor/lib/sensors.ssc.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/sensors.ssc.so
 vendor/lib64/sensor_calibrate.so
+vendor/lib64/sensors.ssc.so
 
 # Touchscreen
 vendor/bin/hbtp_daemon
