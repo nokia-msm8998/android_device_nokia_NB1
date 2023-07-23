@@ -2,7 +2,6 @@
 ## From Nokia/Daredevil_00WW/DDV_sprout:11/RKQ1.210607.001/00WW_3_69G:user/release-keys unless pinned
 
 # Audio (ACDB) - from CTL_sprout - QKQ1.190828.002
-vendor/etc/acdbdata/adsp_avs_config.acdb|df26d45014538751c377f35728a6d3f284130996
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|2ed6395d6094b0632ceb48d99ac64bc5c68b8691
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|99c9188cea811fb5eef19b61a714bf32d1f97f66
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|59553a41b292b34adacf1c9b8efc4af1a64492ec
@@ -11,18 +10,19 @@ vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Hdmi_cal.acdb:vendor/etc/acdbdata/MT
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|26abca2842d2c844d1676e524f0b6bc12b21a352
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|dc1e9e8214ed8cb7918d4d9a5d25d81b46b05a9c
 vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/workspaceFile.qwsp:vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|caf2c32585c13d70d96c8c2e9ab0ccf8ac4afc61
+vendor/etc/acdbdata/adsp_avs_config.acdb|df26d45014538751c377f35728a6d3f284130996
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
+vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
-vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
@@ -30,14 +30,14 @@ vendor/lib64/libsdsprpc.so
 # ADSP (Modules)
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so
-vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
-vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
-vendor/lib/rfsa/adsp/libedge_smooth_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Rohm_skel.so
+vendor/lib/rfsa/adsp/libadsp_fd_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
+vendor/lib/rfsa/adsp/libedge_smooth_skel.so
 vendor/lib/rfsa/adsp/libseemore_hexagon_skel.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
@@ -65,10 +65,10 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
+vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libaudio_log_utils.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
@@ -82,10 +82,10 @@ vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
+vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
-vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
@@ -114,29 +114,29 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Bluetooth (A2dp)
+vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 
 # CDSP
 vendor/bin/cdsprpcd
-vendor/lib/libcdsprpc.so
 vendor/lib/libcdsp_default_listener.so
-vendor/lib/libfastrpc_utf_stub.so
+vendor/lib/libcdsprpc.so
 vendor/lib/libfastcrc.so
+vendor/lib/libfastrpc_utf_stub.so
 vendor/lib/libsysmon_cdsp_skel.so
-vendor/lib64/libcdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libfastrpc_utf_stub.so
+vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcrc.so
+vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # CNE
@@ -320,31 +320,31 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
 # DRM
+vendor/lib/libGPQTEEC_vendor.so
+vendor/lib/libGPTEE_vendor.so
+vendor/lib/libSecureUILib.so
+vendor/lib/libStDrvInt.so
 vendor/lib/libbase64.so
 vendor/lib/libcpion.so
 vendor/lib/libcppf.so
-vendor/lib/libGPQTEEC_vendor.so
-vendor/lib/libGPTEE_vendor.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libqisl.so
 vendor/lib/librmp.so
 vendor/lib/libsecureui.so
-vendor/lib/libSecureUILib.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libsi.so
-vendor/lib/libStDrvInt.so
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libbase64.so
+vendor/lib64/libcpion.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
 vendor/lib64/librmp.so
 vendor/lib64/libsecureui.so
-vendor/lib64/libSecureUILib.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsi.so
-vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
 # DRM (HDCP)
@@ -428,8 +428,8 @@ vendor/bin/lowi-server
 vendor/bin/mlid
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/etc/gpfspath_oem_config.xml
+-vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
@@ -460,20 +460,20 @@ vendor/lib/egl/libQTapGLES.so|eb1414aee39221b707fd6df6fe423f826f4adb57
 vendor/lib/egl/libq3dtools_adreno.so|b43e39f86ed2fc411f5a7202214f660083e63cbc
 vendor/lib/egl/libq3dtools_esx.so|a953e89fa73dff3cb7b43e183c3f36ad7a73c022
 vendor/lib/hw/vulkan.msm8998.so|1f1e27bf3254cebbc1c0aa961c83a67f2ba8aa66
-vendor/lib/libadreno_utils.so|a9cf27142db61bb0fcddc30cc80ba0d5bf9ea711
 vendor/lib/libC2D2.so|b250b2b94a70b465f49f49b9f99f02ddacf4ffd0
-vendor/lib/libc2d30_bltlib.so|45792246fd7290c43e8533836f72452f46059e47
 vendor/lib/libCB.so|c1368ab9bee5cd5236e71239e95f5e6fc89ec89e
 vendor/lib/libEGL_adreno.so|31e44fac035da19ac261de63e0edf186132b24ff
+vendor/lib/libOpenCL.so|c188145ba4e799ba8733acadceb6ce52b6041e4c
+vendor/lib/libVkLayer_q3dtools.so|527589b3780440dc26aceebc97866dadbeeebd86
+vendor/lib/libadreno_utils.so|a9cf27142db61bb0fcddc30cc80ba0d5bf9ea711
+vendor/lib/libc2d30_bltlib.so|45792246fd7290c43e8533836f72452f46059e47
 vendor/lib/libgsl.so|7bc7c7590daf591017d6d2353604b2d9f87be571
 vendor/lib/libhdr_tm.so|8d253c28c1fd976ac009088e36d483c16566f9a5
 vendor/lib/libllvm-glnext.so|e3133831b86fbab799ec2d6da9ab0eb2a0b8bad7
 vendor/lib/libllvm-qcom.so|9be63d3767827ee946032d62b18850926a20509e
-vendor/lib/libOpenCL.so|c188145ba4e799ba8733acadceb6ce52b6041e4c
 vendor/lib/libpvr.so|3c7d0c03e292a649a645ebecf97920eb34369ad3
 vendor/lib/libq3dtools_adreno.so|8d86f17059c210ab15a57ac9c648da1311ae35a1
 vendor/lib/librs_adreno.so|21cb023ba33062fbb1ad9b1738239c79a5a8ec43
-vendor/lib/libVkLayer_q3dtools.so|527589b3780440dc26aceebc97866dadbeeebd86
 vendor/lib64/egl/eglSubDriverAndroid.so|d883d49a91c0a8da783d6df5e48b3f0e02f5ac59
 vendor/lib64/egl/libEGL_adreno.so|3dabe7acc08a4fa515faadd905cf596cc1feda74
 vendor/lib64/egl/libGLESv1_CM_adreno.so|ffda460984dfba47c62fc8c930219235e10ce863
@@ -482,20 +482,20 @@ vendor/lib64/egl/libQTapGLES.so|6fb056221e4417525bbf202efc7237697bf4037f
 vendor/lib64/egl/libq3dtools_adreno.so|ff8f8e0da729a9ceb272b08de8fe9eb1d02d5eed
 vendor/lib64/egl/libq3dtools_esx.so|d4eab828f11009c52edd3661f6295750bf22ca0d
 vendor/lib64/hw/vulkan.msm8998.so|ba974da34ad96003e77de2bece70d3eeaa758988
-vendor/lib64/libadreno_utils.so|c15c8b0366749a0cdafe8fe12bac36c796722274
 vendor/lib64/libC2D2.so|f836c442b6832d70083af81994bb6eb4fe5a4b51
-vendor/lib64/libc2d30_bltlib.so|be61233d2f31debe746bf77376b431152764e171
 vendor/lib64/libCB.so|436c7d0648d3d377ac148ef6b661d12361055c2f
 vendor/lib64/libEGL_adreno.so|31e44fac035da19ac261de63e0edf186132b24ff
+vendor/lib64/libOpenCL.so|dfd1d8c3a3e05dc1bee287813d4c94b2449ac06e
+vendor/lib64/libVkLayer_q3dtools.so|9590e902f9a2205eee55dd041cf165e3b3f4847e
+vendor/lib64/libadreno_utils.so|c15c8b0366749a0cdafe8fe12bac36c796722274
+vendor/lib64/libc2d30_bltlib.so|be61233d2f31debe746bf77376b431152764e171
 vendor/lib64/libgsl.so|be83248d2340806acc78613da74dff53f66b7941
 vendor/lib64/libhdr_tm.so|1e74de5b505c8f742f1fb0379725ec9f5fd53282
 vendor/lib64/libllvm-glnext.so|265407ef00d5f8bfa88f3344e01509cbd400d892
 vendor/lib64/libllvm-qcom.so|c4a55bdd7291c722dc5bf84064e2914e5256af7a
-vendor/lib64/libOpenCL.so|dfd1d8c3a3e05dc1bee287813d4c94b2449ac06e
 vendor/lib64/libpvr.so|349bcfb07edda1034fe30df6ae2ced5297ecb7ed
 vendor/lib64/libq3dtools_adreno.so|8d86f17059c210ab15a57ac9c648da1311ae35a1
 vendor/lib64/librs_adreno.so|bf87696c917d75da5557c194098faaae5e303a0b
-vendor/lib64/libVkLayer_q3dtools.so|9590e902f9a2205eee55dd041cf165e3b3f4847e
 
 # Graphics (SDM) - from phoenix_sprout - phoenix_lao_com-user 10 QKQ1.190918.001 202681220e953 release-keys
 vendor/lib/libqseed3.so|1a67e4c3e7d904dc3d3af35c0f516fe13ed88bcb
@@ -545,11 +545,7 @@ vendor/lib64/libgcs.so|d125c49f6af5aa939c0bf791046336b24795556e
 # Media
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
-vendor/lib/libdsd2pcm.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmosal.so
-vendor/lib/libmulawdec.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -564,13 +560,14 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/libdsd2pcm.so
+vendor/lib/libmm-color-convertor.so
+vendor/lib/libmmosal.so
+vendor/lib/libmulawdec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal.so
-vendor/lib64/libmulawdec.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so
@@ -583,6 +580,9 @@ vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
+vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libmulawdec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 
 # Pasrmanager
@@ -651,7 +651,6 @@ vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
-vendor/lib/libqmiservices.so
 -vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
@@ -660,6 +659,7 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmi_legacy.so
+vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -669,7 +669,6 @@ vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
-vendor/lib64/libqmiservices.so
 -vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
@@ -678,6 +677,7 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
+vendor/lib64/libqmiservices.so
 
 # QSeecom (Qualcomm Secure Execution Environment Communicator)
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
@@ -705,8 +705,8 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Radio
--system_ext/app/embms/embms.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+-system_ext/app/embms/embms.apk
 system_ext/etc/permissions/embms.xml
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephonyservice.xml
@@ -759,9 +759,9 @@ vendor/bin/qti
 vendor/bin/rmt_storage
 vendor/bin/ssgqmigd
 vendor/bin/tftp_server
+vendor/etc/Diag.cfg
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/Diag.cfg
 vendor/etc/init/qcrild.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/lib/libconfigdb.so
@@ -777,13 +777,13 @@ vendor/lib/liboemaids_vendor.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libqcmaputils.so
-vendor/lib/libqcrildatactl.so
 vendor/lib/libqcrilFramework.so
+vendor/lib/libqcrildatactl.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
 vendor/lib/libril-qc-hal-qmi.so
-vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/libril-qc-logger.so
+vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qc-radioconfig.so
 vendor/lib/libril-qcril-hook-oem.so
@@ -825,13 +825,13 @@ vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
-vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrilFramework.so
+vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
-vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-logger.so
+vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
@@ -958,17 +958,17 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 -system_ext/priv-app/ims/ims.apk
+vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
-vendor/bin/ims_rtp_daemon
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/dpmQmiMgr.rc
+vendor/etc/init/ims_rtp_daemon_legacy.rc
 vendor/etc/init/imsdatadaemon.rc
 vendor/etc/init/imsqmidaemon.rc
 vendor/etc/init/imsrcsd.rc
-vendor/etc/init/ims_rtp_daemon_legacy.rc
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/ipacm-diag.rc
@@ -1099,28 +1099,28 @@ vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
 
 # VPP
-vendor/lib/libvpphvx.so
-vendor/lib/libvpplibrary.so
 vendor/lib/libmmsw_detail_enhancement.so
 vendor/lib/libmmsw_math.so
 vendor/lib/libmmsw_opencl.so
 vendor/lib/libmmsw_platform.so
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvpplibrary.so
 vendor/lib64/libmmsw_detail_enhancement.so
 vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
 vendor/lib64/libmmsw_platform.so
+vendor/lib64/libvpphvx.so
+vendor/lib64/libvpplibrary.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # UBWC
-vendor/lib/libstreamparser.so
 vendor/lib/libUBWC.so
-vendor/lib64/libstreamparser.so
+vendor/lib/libstreamparser.so
 vendor/lib64/libUBWC.so
+vendor/lib64/libstreamparser.so
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
