@@ -22,14 +22,20 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@5.0-impl \
-    android.hardware.soundtrigger@2.1-impl
+    android.hardware.soundtrigger@2.2-impl
 
 PRODUCT_PACKAGES += \
+    audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
     libaudioroute \
-    libtinycompress
+    libtinycompress \
+    libhfp \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
