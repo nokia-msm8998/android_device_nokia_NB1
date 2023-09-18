@@ -444,6 +444,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
+    init.logcat.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
