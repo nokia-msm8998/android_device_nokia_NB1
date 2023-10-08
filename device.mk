@@ -265,6 +265,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    device/nokia/NLA/prebuilt/Image.gz-dtb:kernel
+
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0.vendor \
