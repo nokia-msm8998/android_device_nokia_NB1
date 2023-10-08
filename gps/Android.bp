@@ -15,6 +15,7 @@ GNSS_CFLAGS = [
     "-Wno-error=switch",
     "-Wno-error=date-time",
     "-Wno-error=enum-compare",
+    "-Wno-unqualified-std-cast-call",
 ]
 
 /* Activate the following for debug purposes only,
