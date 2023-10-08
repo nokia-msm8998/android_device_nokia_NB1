@@ -4,20 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Indicate the first api level the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 27
-
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from NLA device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := lineage_NLA
+PRODUCT_NAME := aosp_NLA
 PRODUCT_DEVICE := NLA
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
