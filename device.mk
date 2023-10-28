@@ -265,6 +265,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    device/nokia/NLA-kernel/kernel:kernel
+
 # Kernel headers
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom-caf/msm8998/kernel-headers
 
