@@ -1020,51 +1020,38 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 
-# Graphics (Adreno) - from phoenix_sprout - phoenix_lao_com-user 10 QKQ1.190918.001 202681220e953 release-keys
-vendor/lib/egl/eglSubDriverAndroid.so|0281b6e172065bcf1f46dfb0ab23aee57df4f826
-vendor/lib/egl/libEGL_adreno.so|e8217b52ee66ffb2a091a2e81565dece057261e9
-vendor/lib/egl/libGLESv1_CM_adreno.so|046e9020004fdd54ebe19cee923b25261c419fe6
-vendor/lib/egl/libGLESv2_adreno.so|2b09aa80e0d2660c9c0ecf0c177724219f8c6d42
-vendor/lib/egl/libQTapGLES.so|eb1414aee39221b707fd6df6fe423f826f4adb57
-vendor/lib/egl/libq3dtools_adreno.so|b43e39f86ed2fc411f5a7202214f660083e63cbc
-vendor/lib/egl/libq3dtools_esx.so|a953e89fa73dff3cb7b43e183c3f36ad7a73c022
-vendor/lib/hw/vulkan.msm8998.so|1f1e27bf3254cebbc1c0aa961c83a67f2ba8aa66
-vendor/lib/libC2D2.so|b250b2b94a70b465f49f49b9f99f02ddacf4ffd0
-vendor/lib/libCB.so|c1368ab9bee5cd5236e71239e95f5e6fc89ec89e
-vendor/lib/libEGL_adreno.so|31e44fac035da19ac261de63e0edf186132b24ff
-vendor/lib/libOpenCL.so|c188145ba4e799ba8733acadceb6ce52b6041e4c
-vendor/lib/libVkLayer_q3dtools.so|527589b3780440dc26aceebc97866dadbeeebd86
-vendor/lib/libadreno_utils.so|a9cf27142db61bb0fcddc30cc80ba0d5bf9ea711
-vendor/lib/libc2d30_bltlib.so|45792246fd7290c43e8533836f72452f46059e47
-vendor/lib/libgsl.so|7bc7c7590daf591017d6d2353604b2d9f87be571
-vendor/lib/libhdr_tm.so|8d253c28c1fd976ac009088e36d483c16566f9a5
-vendor/lib/libllvm-glnext.so|e3133831b86fbab799ec2d6da9ab0eb2a0b8bad7
-vendor/lib/libllvm-qcom.so|9be63d3767827ee946032d62b18850926a20509e
-vendor/lib/libpvr.so|3c7d0c03e292a649a645ebecf97920eb34369ad3
-vendor/lib/libq3dtools_adreno.so|8d86f17059c210ab15a57ac9c648da1311ae35a1
-vendor/lib/librs_adreno.so|21cb023ba33062fbb1ad9b1738239c79a5a8ec43
-vendor/lib64/egl/eglSubDriverAndroid.so|d883d49a91c0a8da783d6df5e48b3f0e02f5ac59
-vendor/lib64/egl/libEGL_adreno.so|3dabe7acc08a4fa515faadd905cf596cc1feda74
-vendor/lib64/egl/libGLESv1_CM_adreno.so|ffda460984dfba47c62fc8c930219235e10ce863
-vendor/lib64/egl/libGLESv2_adreno.so|7f4ee250b12da5629614e1a263047615bfb89175
-vendor/lib64/egl/libQTapGLES.so|6fb056221e4417525bbf202efc7237697bf4037f
-vendor/lib64/egl/libq3dtools_adreno.so|ff8f8e0da729a9ceb272b08de8fe9eb1d02d5eed
-vendor/lib64/egl/libq3dtools_esx.so|d4eab828f11009c52edd3661f6295750bf22ca0d
-vendor/lib64/hw/vulkan.msm8998.so|ba974da34ad96003e77de2bece70d3eeaa758988
-vendor/lib64/libC2D2.so|f836c442b6832d70083af81994bb6eb4fe5a4b51
-vendor/lib64/libCB.so|436c7d0648d3d377ac148ef6b661d12361055c2f
-vendor/lib64/libEGL_adreno.so|31e44fac035da19ac261de63e0edf186132b24ff
-vendor/lib64/libOpenCL.so|dfd1d8c3a3e05dc1bee287813d4c94b2449ac06e
-vendor/lib64/libVkLayer_q3dtools.so|9590e902f9a2205eee55dd041cf165e3b3f4847e
-vendor/lib64/libadreno_utils.so|c15c8b0366749a0cdafe8fe12bac36c796722274
-vendor/lib64/libc2d30_bltlib.so|be61233d2f31debe746bf77376b431152764e171
-vendor/lib64/libgsl.so|be83248d2340806acc78613da74dff53f66b7941
-vendor/lib64/libhdr_tm.so|1e74de5b505c8f742f1fb0379725ec9f5fd53282
-vendor/lib64/libllvm-glnext.so|265407ef00d5f8bfa88f3344e01509cbd400d892
-vendor/lib64/libllvm-qcom.so|c4a55bdd7291c722dc5bf84064e2914e5256af7a
-vendor/lib64/libpvr.so|349bcfb07edda1034fe30df6ae2ced5297ecb7ed
-vendor/lib64/libq3dtools_adreno.so|8d86f17059c210ab15a57ac9c648da1311ae35a1
-vendor/lib64/librs_adreno.so|bf87696c917d75da5557c194098faaae5e303a0b
+# Graphics (Adreno) - from UM9
+vendor/lib/egl/eglSubDriverAndroid.so|4a7e900e59c37096f95aec9f77683faa2a66b91e
+vendor/lib/egl/libEGL_adreno.so|cb0ced125ad9cc09ad2c25f11998df1eda2a5077
+vendor/lib/egl/libGLESv1_CM_adreno.so|446279f43811de885507bdd3d6491da8f0cfd26d
+vendor/lib/egl/libGLESv2_adreno.so|9df0791712b2b3b61e628d4ba5ccd85506c07a28
+vendor/lib/egl/libq3dtools_adreno.so|49c03ff3c14e17af525c66f5cf017504e689f54e
+vendor/lib/hw/vulkan.adreno.so|a59137c9e42de3e179607bf9ce0fc6a26dcb4ed2
+vendor/lib/libC2D2.so|7ffbb30a7b99d532eaf20b4a117fd908f1acdc01
+vendor/lib/libCB.so|1ed8d02d3d5bbc229652349c4442aeb0ad455b53
+vendor/lib/libOpenCL.so|3286f4a37970cf7571af8493c8b034d3a306cdc2
+vendor/lib/libVkLayer_q3dtools.so|3931891a11ebbbac69c8c4c36136afc4174e9d67
+vendor/lib/libadreno_utils.so|fbe318e308d47f175206c110bc8162b67d1984ad
+vendor/lib/libc2d30_bltlib.so|c3d5acf7804cdc6d45dd7a0fae6e6abdaf827380
+vendor/lib/libgpudataproducer.so|3d1410869917fc8e696d7bdb00a460305ef0eaf0
+vendor/lib/libgsl.so|55590005d722d15e9dbb70af027fd4ae8041e295
+vendor/lib/libllvm-glnext.so|c011d31be4792983054b4c711d2e1e419f4e9e14
+vendor/lib/libllvm-qcom.so|73ae0d52f3482c817d4c240195ef3e283f61dcc4
+vendor/lib64/egl/eglSubDriverAndroid.so|9cc683418ea3560cca9dcddcab946eec8a401347
+vendor/lib64/egl/libEGL_adreno.so|aa4ac5cdcae161584849ba90a70dbd51899f4e74
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b45486353fceb47ec419ef580fdf6d2305a842ff
+vendor/lib64/egl/libGLESv2_adreno.so|280a05fac2854914c499b798bba4a6cd6e921b7c
+vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
+vendor/lib64/hw/vulkan.adreno.so|56483f485995253bedb475eaa2e4567c9c194c6e
+vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
+vendor/lib64/libCB.so|c89d16df36a8ba3f068a07ed1cb952992f723062
+vendor/lib64/libOpenCL.so|005087493746ae4fed3f1a60f6a40b0e327604dd
+vendor/lib64/libVkLayer_q3dtools.so|e57bf6467fdb7571d55bb5b864244e993889acea
+vendor/lib64/libadreno_utils.so|18eb03db701b8c8fabf085d185845b3a4bf90d37
+vendor/lib64/libc2d30_bltlib.so|558170a489af2e4c7e1e0f2813bb96ab00a01b36
+vendor/lib64/libgsl.so|b6c465d3e8d339af0c84f37d3f05658c0bc9c8df
+vendor/lib64/libllvm-glnext.so|ccac9d5ab1d220ae47cb3b3e300dfef19b64e2c0
+vendor/lib64/libllvm-qcom.so|9c9222e1932bcb0ccfac1d9fae4f02335632a5bd
 
 # Graphics (Firmware) - from NB1 - PPR1.180610.011
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
@@ -1087,21 +1074,23 @@ vendor/firmware/a540_zap.b02|445160805976753ddeb00325bca27961277d797b
 vendor/firmware/a540_zap.elf|0e3f352b9621be0df46a16ce3aaa08dbc26fc6a2
 vendor/firmware/a540_zap.mdt|5097aef4991d2a85bd31506b330ed5689a45c675
 
-# Graphics (SDM) - from phoenix_sprout - phoenix_lao_com-user 10 QKQ1.190918.001 202681220e953 release-keys
+# Graphics (SDM) - from UM9
+vendor/lib/libhdr_tm.so|a2292af314f9fa86b9ec2bb11ad72bf85e959842
 vendor/lib/libqseed3.so|1a67e4c3e7d904dc3d3af35c0f516fe13ed88bcb
-vendor/lib/libsdedrm.so|93d9acc2a9a857f6e36cf0db348977eedfeec9cb
+vendor/lib/libsdedrm.so|c5a046b897f779bdac668c6b72f8e7cd17cb5bdd
 vendor/lib/libsdm-color.so|0ac3aa59aa06eed8b66bc72d8cd74ea1b2eb34fb
-vendor/lib/libsdm-diag.so|a2b532158e12562e1fb74695bf829de1b94c2cde
--vendor/lib/libsdm-disp-vndapis.so|15a98ef885dbd29935b1107d7a2988ae495abb87
-vendor/lib/libsdmextension.so|cb5d63a477317806cf1a95cfd5393fe83dd86f94
+vendor/lib/libsdm-diag.so|d20544ca7dfb90b7faa9ac09cc7459e757f23d6b
+-vendor/lib/libsdm-disp-vndapis.so|efe67908e419b8db34068896c9b45cdf9b4e535b
+vendor/lib/libsdmextension.so|d2aa5b0ebe79dc5f4451cf350d50bde295c83a0b
 vendor/lib/libtinyxml2_1.so|aec76b36890b163f9cf1be594d6b082887f0a9b2
-vendor/lib64/libqseed3.so|24ae4dfe5d9fa27a858b64dfafd1c713da6e6fde
-vendor/lib64/libsdedrm.so|8df03ed75d59ad0ae25dd1daa5ba9298a0e4d9ae
-vendor/lib64/libsdm-color.so|ed022cfcc1546c11b82991986e0a938464400858
-vendor/lib64/libsdm-diag.so|6eb99b83036f917070393fa067eaebc50a5ff307
--vendor/lib64/libsdm-disp-vndapis.so|ba4978c373f9892d884d07c4cf25dba9d73fda1f
-vendor/lib64/libsdmextension.so|69028df8b08ded29b835453b84e9a9c4fea958d1
-vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
+vendor/lib64/libhdr_tm.so|a1b9bbad12217e6b79951774801aa54be6460fd6
+vendor/lib64/libqseed3.so|a858c83fb38ef7acd21ea0a23f36ef22ba8c06ef
+vendor/lib64/libsdedrm.so|a867b8f5c3c6cc5b0cf0ca642f3564acaa7020e0
+vendor/lib64/libsdm-color.so|d9bec7004ec8fd292bb0cd3388359448ca96bd23
+vendor/lib64/libsdm-diag.so|b6b6f2b602c2b19763d262a021ce6ee5562d7dc6
+-vendor/lib64/libsdm-disp-vndapis.so|8e92d1f17735c26658c17148da6e1882b5bc6fb0
+vendor/lib64/libsdmextension.so|503ff59911a7425fa1d4d1b6380c22e53196bfae
+vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Health
 vendor/bin/hw/android.hardware.health@2.1-service
