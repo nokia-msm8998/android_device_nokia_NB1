@@ -2,4 +2,5 @@
 add_hwservice(hal_nfc_default, hal_nxpnfc_hwservice)
 allow hal_nfc_default hal_nxpnfc_hwservice:hwservice_manager find;
 
+allow hal_nfc_default nfc_vendor_data_file:file create;
 allow hal_nfc_default nfc_vendor_data_file:dir rw_dir_perms;

@@ -9,6 +9,8 @@ allow untrusted_app_25 zygote:unix_stream_socket getopt;
 # 29
 allow untrusted_app_29 rootfs:dir read;
 allow untrusted_app_29 zygote:unix_stream_socket getopt;
+allow untrusted_app_29 xdsp_device:chr_file read;
+allow untrusted_app_29 vendor_adsprpc_prop:file read;
 
 # 30
 allow untrusted_app_30 zygote:unix_stream_socket getopt;
