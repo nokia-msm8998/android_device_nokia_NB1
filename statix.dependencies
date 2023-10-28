@@ -1,6 +1,10 @@
 [
   {
-    "repository": "android_kernel_nokia_msm8998",
-    "target_path": "kernel/nokia/msm8998"
+    "repository": "android_device_nokia_NLA-kernel",
+    "target_path": "device/nokia/NLA-kernel"
+  },
+  {
+    "repository": "android_vendor_nokia_NLA",
+    "target_path": "vendor/nokia/NLA"
   }
 ]
