@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_NLA.mk
+    $(LOCAL_DIR)/statix_NLA.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_NLA-user \
-    lineage_NLA-userdebug \
-    lineage_NLA-eng
+    statix_NLA-user \
+    statix_NLA-userdebug \
+    statix_NLA-eng
