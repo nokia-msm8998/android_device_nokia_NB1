@@ -11,13 +11,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Indicate the first api level the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 27
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from NLA device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := lineage_NLA
+# Boot animation resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_NAME := aosp_NLA
 PRODUCT_DEVICE := NLA
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
