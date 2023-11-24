@@ -560,7 +560,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \
-    netutils-wrapper-1.0 \
     wcnss_service \
     WifiOverlay \
     wpa_supplicant \
@@ -575,7 +574,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     android.system.net.netd@1.0.vendor \
-    netutils-wrapper-1.0
 
 # Inherit vendor
 $(call inherit-product, vendor/nokia/NLA/NLA-vendor.mk)
