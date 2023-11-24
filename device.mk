@@ -181,10 +181,9 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4 \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey
-    
+    android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.4.vendor
+
 # Dynamic Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
