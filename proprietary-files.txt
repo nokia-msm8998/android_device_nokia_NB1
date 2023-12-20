@@ -1,20 +1,16 @@
 ## Common proprietary files
 ## From Nokia/Daredevil_00WW/DDV_sprout:11/RKQ1.210607.001/00WW_3_690:user/release-keys unless pinned
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/lib/libadsprpc.so
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsp_hvx_callback_skel.so
-vendor/lib/libadsp_hvx_stub.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libfastcvopt.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+# Audio (ACDB) - from CTL - QKQ1.190828.002
+vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Handset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/CTL/sdm660-snd-card-ctl/workspaceFile.qwsp:vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 
 # ADSP (Modules)
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
