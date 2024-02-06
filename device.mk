@@ -17,5 +17,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_binder
+
 # Inherit device specific vendor makefiles
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
