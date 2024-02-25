@@ -55,6 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        # Use vendor version of libgui
+        vendor/lib/hw/camera.msm8998.so)
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+            "${PATCHELF}" --add-needed "libshim_gui.so" "${2}"
+            ;;
         # Patch gx_fpd for VNDK support
         vendor/bin/gx_fpd)
             "${PATCHELF}" --remove-needed "libunwind.so" "${2}"
