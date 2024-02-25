@@ -23,7 +23,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_binder
+    libshim_binder \
+    libshim_gui
 
 # Ramdisk
 PRODUCT_PACKAGES += \
