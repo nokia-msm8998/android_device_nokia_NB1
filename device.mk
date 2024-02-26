@@ -25,5 +25,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     libshim_binder
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.nb1.camera.rc \
+    init.nb1.target.rc
+
 # Inherit device specific vendor makefiles
 $(call inherit-product, vendor/nokia/NLA/NLA-vendor.mk)
