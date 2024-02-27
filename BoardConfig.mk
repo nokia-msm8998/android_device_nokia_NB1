@@ -14,3 +14,6 @@ TARGET_KERNEL_CONFIG := lineageos_NB1_defconfig
 
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Props
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
