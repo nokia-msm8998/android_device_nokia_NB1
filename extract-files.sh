@@ -70,10 +70,16 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libbacktrace.so" "${2}"
             "${PATCHELF}" --add-needed "liblog.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_binder.so" "${2}"
+            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
+        vendor/lib64/hw/fingerprint.msm8998.so|vendor/lib64/libfp_client.so|vendor/lib64/libfpjni.so|vendor/lib64/libfpservice.so)
+	    "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+	    ;;
         # Hexedit gxfingerprint to load Goodix firmware from /vendor/firmware/
         vendor/lib64/hw/gxfingerprint.default.so)
             sed -i -e 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+	    ;;
     esac
 }
 
