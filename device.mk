@@ -30,7 +30,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_binder \
-    libshim_gui
+    libshim_gui \
+    libfakelogprint
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

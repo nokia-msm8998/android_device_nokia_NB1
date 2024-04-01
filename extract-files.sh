@@ -71,14 +71,26 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "liblog.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_binder.so" "${2}"
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            if ! "${PATCHELF_0_17_2}" --print-needed "${2}" | grep "libfakelogprint.so" > /dev/null; then
+                "${PATCHELF_0_17_2}" --add-needed "libfakelogprint.so" "${2}"
+            fi
             ;;
-        vendor/lib64/hw/fingerprint.msm8998.so|vendor/lib64/libfp_client.so|vendor/lib64/libfpjni.so|vendor/lib64/libfpservice.so)
+        vendor/lib64/hw/fingerprint.msm8998.so)
+            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            if ! "${PATCHELF_0_17_2}" --print-needed "${2}" | grep "libfakelogprint.so" > /dev/null; then
+                "${PATCHELF_0_17_2}" --add-needed "libfakelogprint.so" "${2}"
+            fi
+            ;;
+        vendor/lib64/libfp_client.so|vendor/lib64/libfpjni.so|vendor/lib64/libfpservice.so)
 	    "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
 	    ;;
         # Hexedit gxfingerprint to load Goodix firmware from /vendor/firmware/
         vendor/lib64/hw/gxfingerprint.default.so)
             sed -i -e 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            if ! "${PATCHELF_0_17_2}" --print-needed "${2}" | grep "libfakelogprint.so" > /dev/null; then
+                "${PATCHELF_0_17_2}" --add-needed "libfakelogprint.so" "${2}"
+            fi
 	    ;;
     esac
 }
