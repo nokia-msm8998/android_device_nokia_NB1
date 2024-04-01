@@ -31,3 +31,11 @@ cc_library_shared {
         "PermissionCache.cpp",
     ],
 }
+
+cc_library_shared {
+    name: "libfakelogprint",
+    srcs: ["libfakelogprint.cpp"],
+    shared_libs: ["liblog"],
+    compile_multilib: "64",
+    vendor: true
+}
