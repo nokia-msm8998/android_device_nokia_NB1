@@ -13,6 +13,10 @@ $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
 
+# Camera
+PRODUCT_PACKAGES += \
+    libgui_vendor:32
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
