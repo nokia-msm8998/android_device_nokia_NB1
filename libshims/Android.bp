@@ -17,7 +17,8 @@ cc_library_shared {
         "frameworks/native/include",
     ],
     shared_libs: [
-        "libgui_vendor"
+        "libgui_vendor",
+        "libutils"
     ]
 }
 
