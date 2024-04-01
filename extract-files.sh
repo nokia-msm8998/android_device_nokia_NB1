@@ -55,6 +55,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+	# Load audiosphere from the new path
+    	system_ext/etc/permissions/audiosphere.xml)
+            sed -i 's|/system/framework/audiosphere.jar|/system_ext/framework/audiosphere.jar|g' "${2}"
+            ;;
         # Use vendor version of libgui
         vendor/lib/hw/camera.msm8998.so)
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
