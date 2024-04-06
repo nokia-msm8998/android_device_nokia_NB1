@@ -55,6 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        # Load sensors.rangefinder.so from /vendor partition
+        vendor/lib/libmmcamera2_stats_modules.so)
+            sed -i -e 's|system/lib64/sensors.rangefinder.so|vendor/lib64/sensors.rangefinder.so|g' "${2}"
+            sed -i -e 's|system/lib/sensors.rangefinder.so|vendor/lib/sensors.rangefinder.so|g' "${2}"
+            ;;
         # Patch gx_fpd for VNDK support
         vendor/bin/gx_fpd)
             "${PATCHELF}" --remove-needed "libunwind.so" "${2}"
@@ -65,6 +70,7 @@ function blob_fixup() {
         # Hexedit gxfingerprint to load Goodix firmware from /vendor/firmware/
         vendor/lib64/hw/gxfingerprint.default.so)
             sed -i -e 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+	    ;;
     esac
 }
 
