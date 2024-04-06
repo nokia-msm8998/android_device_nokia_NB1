@@ -9,6 +9,10 @@ DEVICE_PATH := device/nokia/NB1
 # Inherit from the common device configuration.
 $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
