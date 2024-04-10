@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/nokia/NLA
 
+# QCOM
+TARGET_BOARD_PLATFORM := msm8998
+
 # Inherit from common device tree
 include device/nokia/msm8998-common/BoardConfigCommon.mk
 
@@ -24,9 +27,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3728096384
-
-# QCOM
-TARGET_BOARD_PLATFORM := msm8998
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
