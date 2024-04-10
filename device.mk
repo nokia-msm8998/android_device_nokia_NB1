@@ -34,7 +34,8 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.nb1.camera.rc \
-    init.nb1.target.rc
+    init.nb1.target.rc \
+    fstab.qcom
 
 # Inherit device specific vendor makefiles
 $(call inherit-product, vendor/nokia/NLA/NLA-vendor.mk)
