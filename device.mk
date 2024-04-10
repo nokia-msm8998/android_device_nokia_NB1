@@ -7,6 +7,7 @@
 DEVICE_PATH := device/nokia/NB1
 
 # Inherit from the common device configuration.
+TARGET_NOKIA_PLATFORM := msm8998
 $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 
 # Keylayout
