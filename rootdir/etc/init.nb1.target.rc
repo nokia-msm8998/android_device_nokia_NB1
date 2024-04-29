@@ -1,9 +1,5 @@
 import /vendor/etc/init/hw/init.nb1.camera.rc
 
-on init
-    setprop persist.fp.navigation 1
-    setprop persist.close.keymaster 1
-
 on boot
     # Set fingerprint device permissions
     chown system system /dev/goodix_fp
