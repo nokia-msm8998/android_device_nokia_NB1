@@ -36,6 +36,9 @@ vendor/etc/acdbdata/NB1/workspaceFile.qwsp
 etc/firmware/tfa98xx.cnt:vendor/firmware/tfa98xx.cnt
 etc/firmware/tfa98xxEVT.cnt:vendor/firmware/tfa98xxEVT.cnt
 
+# Audio amplifier
+etc/audio/silence_48k.wav:vendor/etc/audio/silence_48k.wav
+
 # Camera HAL
 lib/sensors.rangefinder.so:vendor/lib/sensors.rangefinder.so
 lib64/sensors.rangefinder.so:vendor/lib64/sensors.rangefinder.so
@@ -478,6 +481,20 @@ vendor/firmware/ipa_fws.mdt
 # Keystore
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
+
+# Listen
+vendor/lib/hw/sound_trigger.primary.msm8998.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/libsmwrapper.so
+vendor/lib64/hw/sound_trigger.primary.msm8998.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs-osal.so
+vendor/lib64/libgcs.so
 
 # Sensors
 vendor/bin/sensors.qti
