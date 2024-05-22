@@ -176,7 +176,6 @@ vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
-
 # Camera (Actuators)
 vendor/lib/libactuator_ak7371.so
 vendor/lib/libactuator_ak7371_color_fih.so
@@ -453,6 +452,10 @@ etc/firmware/goodixfplv.b06:vendor/firmware/goodixfplv.b06
 etc/firmware/goodixfplv.b07:vendor/firmware/goodixfplv.b07
 etc/firmware/goodixfplv.mdt:vendor/firmware/goodixfplv.mdt
 
+# Gatekeeper
+vendor/lib/hw/gatekeeper.msm8998.so
+vendor/lib64/hw/gatekeeper.msm8998.so
+
 # Graphics (Firmware)
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
@@ -471,6 +474,10 @@ vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
+
+# Keystore
+vendor/lib/hw/keystore.msm8998.so
+vendor/lib64/hw/keystore.msm8998.so
 
 # Sensors
 vendor/bin/sensors.qti

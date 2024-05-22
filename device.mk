@@ -18,6 +18,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libgui_vendor:32
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
