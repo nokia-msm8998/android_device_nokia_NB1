@@ -1,4 +1,6 @@
 import /vendor/etc/init/hw/init.nb1.camera.rc
+import /vendor/etc/init/hw/init.fih.modemconfig.rc
+import /vendor/etc/init/hw/init.fih.poweroff_charging.rc
 
 on boot
     # Set fingerprint device permissions
@@ -57,6 +59,12 @@ service vendor.gx_fpd /vendor/bin/gx_fpd
     class main
     user system
     group system
+
+# Smartamp
+service amp-init-sh /vendor/bin/init.fih.smartamp_init.sh
+    class late_start
+    user system
+    oneshot
 
 on property:sys.boot_completed=1
     restorecon_recursive /data/system/fingerprint/
