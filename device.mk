@@ -10,6 +10,11 @@ DEVICE_PATH := device/nokia/NLA
 TARGET_NOKIA_PLATFORM := msm8998
 $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 
+# Audio
+PRODUCT_PACKAGES += \
+    tinymix.vendor \
+    tinyplay.vendor
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
@@ -47,6 +52,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.nb1.camera.rc \
     init.nb1.target.rc \
+    init.fih.modemconfig.sh \
+    init.fih.smartamp_init.sh \
+    init.fih.poweroff_charging.rc \
     fstab.qcom
 
 # Wi-Fi
