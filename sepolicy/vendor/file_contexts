@@ -1,0 +1,7 @@
+# Audio
+/(vendor|system/vendor)/bin/init\.fih\.smartamp_init\.sh	u:object_r:smartamp_init_exec:s0
+/(vendor|system/vendor)/bin/tinymix                         u:object_r:vendor_tinyalsa_exec:s0
+/(vendor|system/vendor)/bin/tinyplay                        u:object_r:vendor_tinyalsa_exec:s0
+
+# Modem config
+/(vendor|system/vendor)/bin/init\.fih\.modemconfig\.sh        u:object_r:qti_init_shell_exec:s0

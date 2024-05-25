@@ -1,0 +1,10 @@
+# Additional rules because leagcy-um qti_init_shell does not have it.
+allow qti_init_shell vendor_toolbox_exec:file execute_no_trans;
+allow qti_init_shell vendor_data_file:dir { read write open create add_name setattr };
+allow qti_init_shell vendor_data_file:file create_file_perms;
+
+# Don't audit this one, please.
+dontaudit qti_init_shell self:capability dac_read_search;
+
+# Allow it to set properties.
+set_prop(qti_init_shell, property_socket)

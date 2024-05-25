@@ -1,0 +1,2 @@
+# Modem config
+persist.vendor.radio.nokia_fih_mcfg                     u:object_r:vendor_radio_prop:s0
