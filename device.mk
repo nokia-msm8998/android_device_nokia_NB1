@@ -10,6 +10,10 @@ DEVICE_PATH := device/nokia/NLA
 TARGET_NOKIA_PLATFORM := msm8998
 $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 
+# Amplifier calibration
+PRODUCT_PACKAGES += \
+    tfa-calib
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
