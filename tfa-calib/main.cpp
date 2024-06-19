@@ -203,7 +203,9 @@ bool play_sound(const char* filename) {
 }
 
 int main() {
-    if (const auto mixer = mixer_open(0)) {
+    int played = 0;
+
+    if (const auto mixer = mixer_open(0) && played < 1) {
         // Enable speaker
         set_mixer_value_by_name(mixer, "QUAT_MI2S_RX Audio Mixer MultiMedia5", 1);
 
@@ -215,6 +217,8 @@ int main() {
 
         // Close mixer
         mixer_close(mixer);
+
+	played += 1;
     }
 
     return 0;
