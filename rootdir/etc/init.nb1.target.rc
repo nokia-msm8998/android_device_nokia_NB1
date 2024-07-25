@@ -68,12 +68,3 @@ service amp-init-sh /vendor/bin/init.fih.smartamp_init.sh
 
 on property:sys.boot_completed=1
     restorecon_recursive /data/system/fingerprint/
-
-on property:vendor.wifi.mtu=true
-   write /sys/class/net/wlan0/mtu 1440
-
-on property:vendor.wifi.mtu=false
-   write /sys/class/net/wlan0/mtu 1500
-
-on property:vendor.wifi.ommtu=true
-   write /sys/class/net/wlan0/mtu 1390
