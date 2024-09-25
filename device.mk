@@ -12,8 +12,8 @@ $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
-    tinymix.vendor \
-    tinyplay.vendor
+    tinymix \
+    tinyplay
 
 # Keylayout
 PRODUCT_COPY_FILES += \
