@@ -89,3 +89,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit device specific vendor makefiles
 $(call inherit-product, vendor/nokia/NB1/NB1-vendor.mk)
+
+# Inherit extra vendor makefiles
+$(call inherit-product-if-exists, vendor/nokia/extras/extras-vendor.mk)
