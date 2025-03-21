@@ -6,7 +6,6 @@
 # libmmcamera2_sensor_modules, libmmcamera2_iface_modules, libmmcamera2_q3a_core, libmmcamera2_cpp_module,
 # libmmcamera2_stats_modules, libmmcamera2_imglib_modules depends on intrinsic symbols which are difficult to shim
 # like __aeabi_d2lz, __aeabi_ldivmod, __aeabi_ul2d, etc...
-# libmmcamera_tuning depends on libmm-qcamera, which is a GNU Makefile target
 
 # Audio
 vendor/lib/libacdb-fts.so

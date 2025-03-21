@@ -27,18 +27,6 @@ namespace_imports = [
     'vendor/nokia/msm8998-common',
 ]
 
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
-
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    (
-    ): lib_fixup_vendor_suffix,
-    (
-	'libmm-qcamera',
-    ): lib_fixup_remove,
-}
-
 blob_fixups: blob_fixups_user_type = {
     # Load sensors.rangefinder.so from /vendor partition
     'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
@@ -48,6 +36,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+    'vendor/lib/libmmcamera_tuning.so': blob_fixup()
+	.remove_needed('libmm-qcamera.so'),
     # Patch gx_fpd for VNDK support
     'vendor/bin/gx_fpd': blob_fixup()
 	.patchelf_version('0_18')
