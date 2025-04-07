@@ -1,0 +1,8 @@
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
+# Allow vendor_init to create /data/system/fingerprint
+allow vendor_init system_data_file:dir create_dir_perms;
+
+# Allow gx_fpd_data_file to write to /data/system/fingerprint
+allow vendor_init gx_fpd_data_file:file { getattr relabelfrom relabelto };
+allow vendor_init gx_fpd_data_file:dir { rw_file_perms create_file_perms };
