@@ -1,0 +1,9 @@
+on boot
+    chown system system /sys/class/goodix_fp/nav_enabled
+    chmod 0660 /sys/class/goodix_fp/nav_enabled
+
+service vendor.touch-hal /vendor/bin/hw/vendor.lineage.touch-service.nb1
+    interface aidl vendor.lineage.touch.IKeyDisabler/default
+    class hal
+    user system
+    group system

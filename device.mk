@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.nb1
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     WifiOverlayNB1
