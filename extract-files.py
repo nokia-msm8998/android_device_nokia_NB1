@@ -18,9 +18,6 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
-import extract_utils.tools
-extract_utils.tools.DEFAULT_PATCHELF_VERSION = '0_9'
-
 namespace_imports = [
     'device/nokia/NB1',
     'hardware/qcom-caf/msm8998',
@@ -40,7 +37,6 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libmm-qcamera.so'),
     # Patch gx_fpd for VNDK support
     'vendor/bin/gx_fpd': blob_fixup()
-        .patchelf_version('0_18')
         .remove_needed('libunwind.so')
         .remove_needed('libbacktrace.so')
         .add_needed('liblog.so')
@@ -48,21 +44,17 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libfakelogprint.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/hw/fingerprint.msm8998.so': blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libfakelogprint.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libfp_client.so': blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('liblog.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libfpservice.so': blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libbinder_shim.so')
         .add_needed('liblog.so')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     # Hexedit gxfingerprint to load Goodix firmware from /vendor/firmware/
     'vendor/lib64/hw/gxfingerprint.default.so': blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libfakelogprint.so')
         .binary_regex_replace(b'/system/etc/firmware', b'/vendor/firmware\x00\x00\x00\x00')
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
