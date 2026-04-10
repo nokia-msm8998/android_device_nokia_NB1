@@ -6,7 +6,7 @@
 DEVICE_PATH := device/nokia/NB1
 
 # Inherit from the common device configuration.
-$(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
+$(call inherit-product, device/nokia/msm8998-common/common.mk)
 
 # A/B
 PRODUCT_PACKAGES += check_dynamic_partitions
