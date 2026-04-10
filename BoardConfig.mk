@@ -14,9 +14,6 @@ AB_OTA_PARTITIONS += \
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/1da4000.ufshc
 
-# QCOM
-TARGET_BOARD_PLATFORM := msm8998
-
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
@@ -27,8 +24,6 @@ TARGET_COPY_OUT_SYSTEM := system
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_ODM := odm
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -44,18 +39,12 @@ BOARD_NB1_DYNAMIC_PARTITIONS_PARTITION_LIST := system_ext system vendor product 
 # Inherit from common device tree
 include device/nokia/msm8998-common/BoardConfigCommon.mk
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := msm8998
-
 # Camera
 TARGET_SUPPORT_HAL1 := false
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Density
 TARGET_SCREEN_DENSITY := 520
-
-# HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_NB1_defconfig
