@@ -15,18 +15,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_product=false
 
 # Inherit from the common device configuration.
-TARGET_NOKIA_PLATFORM := msm8998
 $(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
-
-# Audio
-PRODUCT_PACKAGES += \
-    tfa-calib
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(DEVICE_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -41,21 +30,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
-# Hotword Enrollment
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hotword.xml
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0.vendor \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
-# NFC
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(DEVICE_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -67,10 +41,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.nb1.camera.rc \
-    init.nb1.target.rc \
-    init.fih.modemconfig.rc \
-    init.fih.modemconfig.sh \
-    init.fih.poweroff_charging.rc
+    init.nb1.target.rc
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
