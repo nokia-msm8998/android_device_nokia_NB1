@@ -5,17 +5,28 @@
 
 DEVICE_PATH := device/nokia/NB1
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Inherit from common device tree
+include device/nokia/msm8998-common/BoardConfigCommon.mk
+
 # A/B
 AB_OTA_PARTITIONS += \
     system_ext \
     product \
     odm
 
-# Kernel
-BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/1da4000.ufshc
+# Camera
+TARGET_SUPPORT_HAL1 := false
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 
-# Treble
-PRODUCT_FULL_TREBLE_OVERRIDE := true
+# Density
+TARGET_SCREEN_DENSITY := 520
+
+# Kernel
+TARGET_KERNEL_CONFIG := lineageos_NB1_defconfig
+BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/1da4000.ufshc
 
 # Partitions
 BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := true
@@ -35,19 +46,6 @@ BOARD_SUPER_PARTITION_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SYSTEM_DEVICE
 BOARD_SUPER_PARTITION_GROUPS := nb1_dynamic_partitions
 BOARD_NB1_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304) # 4MiB overhead
 BOARD_NB1_DYNAMIC_PARTITIONS_PARTITION_LIST := system_ext system vendor product odm
-
-# Inherit from common device tree
-include device/nokia/msm8998-common/BoardConfigCommon.mk
-
-# Camera
-TARGET_SUPPORT_HAL1 := false
-BOARD_QTI_CAMERA_32BIT_ONLY := true
-
-# Density
-TARGET_SCREEN_DENSITY := 520
-
-# Kernel
-TARGET_KERNEL_CONFIG := lineageos_NB1_defconfig
 
 # Props
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
