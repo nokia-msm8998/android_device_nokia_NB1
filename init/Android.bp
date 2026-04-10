@@ -6,13 +6,6 @@
 // Init configuration files
 
 prebuilt_etc {
-	name: "init.nb1.camera.rc",
-	src: "init.nb1.camera.rc",
-	sub_dir: "init/hw",
-	vendor: true,
-}
-
-prebuilt_etc {
         name: "init.nb1.target.rc",
         src: "init.nb1.target.rc",
         sub_dir: "init/hw",
