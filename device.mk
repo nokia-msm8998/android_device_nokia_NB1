@@ -5,7 +5,10 @@
 
 DEVICE_PATH := device/nokia/NB1
 
-# Retrofit
+# Inherit from the common device configuration.
+$(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
+
+# A/B
 PRODUCT_PACKAGES += check_dynamic_partitions
 
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -13,13 +16,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_product=bin/check_dynamic_partitions \
     FILESYSTEM_TYPE_product=ext4 \
     POSTINSTALL_OPTIONAL_product=false
-
-# Inherit from the common device configuration.
-$(call inherit-product, device/nokia/msm8998-common/msm8998-common.mk)
-
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -30,13 +26,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/keylayout/goodix_fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp.kl
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
-
-# Soong
-PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -46,6 +42,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
 
 # Touch
 PRODUCT_PACKAGES += \
