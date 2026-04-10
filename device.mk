@@ -36,7 +36,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.nb1.camera.rc \
     init.nb1.target.rc
 
 PRODUCT_COPY_FILES += \
