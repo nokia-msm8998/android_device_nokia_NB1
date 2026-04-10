@@ -17,6 +17,14 @@ vendor/lib/libaoa.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
 
+# Audio configurations
+vendor/etc/audio_output_policy.conf
+vendor/etc/audio_platform_info.xml
+vendor/etc/audio_platform_info_i2s.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/sound_trigger_mixer_paths.xml
+vendor/etc/sound_trigger_platform_info.xml
+
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
