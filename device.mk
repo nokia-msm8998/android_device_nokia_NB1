@@ -17,8 +17,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8998 \
-    libgui_vendor:32
+    camera.msm8998
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
